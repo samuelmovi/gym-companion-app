@@ -66,7 +66,7 @@ public class AllExercises extends AppCompatActivity {
         startIntervalTrainerButton = findViewById(R.id.buttonStartIntervalTrainer);
 
 
-        // loadExercises();
+        // loadExercise();
         exerciseLoader();
 
         System.out.println("[#] All exercises loaded from disk:");
@@ -78,7 +78,7 @@ public class AllExercises extends AppCompatActivity {
         startCircuitTrainerButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                String[][] exerciseData = new String[selectedExercises.size()][4];
+                String[][] exerciseData;
 
                 if (selectedExercises.size() == 0){
                     // send all warm ups
@@ -88,15 +88,12 @@ public class AllExercises extends AppCompatActivity {
                     }
                 }
                 else{
-
-                    int counter = 0;
-
-                    for(int i=0;i<selectedExercises.size();i++){
+                    exerciseData = new String[selectedExercises.size()][4];
+                    for(int i=0;i<exerciseData.length;i++){
                         String name = selectedExercises.get(i);
                         for(int j=0;j<loadedExercises.size();j++){
                             if(loadedExercises.get(j)[0].equals(name)){
-                                exerciseData[counter] = loadedExercises.get(j);
-                                counter += 1;
+                                exerciseData[i] = loadedExercises.get(j);
                             }
                         }
                     }
@@ -171,6 +168,10 @@ public class AllExercises extends AppCompatActivity {
                         else if (i==4){
                             singleExercise[1] = getString(R.string.categoryBack);
                         }
+                        else{
+                            System.out.println("\n\t[!!!!] Problem loading exercise ");
+                        }
+
                         for (File item: dirContents){
                             String fileName = item.getName();
                             System.out.println("\n[#] Processing: "+fileName+"\n");
@@ -194,9 +195,9 @@ public class AllExercises extends AppCompatActivity {
                                 }
                             }
                             // check for file video extension
-                            else if (extension.equals("mkv") | extension.equals("mp4")| extension.equals("m4v")| extension.equals("mov")){
+                            else if (extension.equals("mkv") | extension.equals("mp4")| extension.equals("m4v")| extension.equals("mov")| extension.equals("webm")){
                                 // [4] extract path of video file
-                                singleExercise[3] = item.toString();
+                                singleExercise[3] = item.getAbsolutePath();
                             }
                         }
                         loadedExercises.add(singleExercise);
@@ -213,22 +214,25 @@ public class AllExercises extends AppCompatActivity {
 
     public void exerciseLoader(){
         File exerciseDir = new File(baseDir.getPath() + "/exercises");
-        System.out.println("\n[#] Working out of: " + exerciseDir.getPath() + "\n");
+        System.out.println("\n[#] Loading exercises from: " + exerciseDir.getPath() + "\n");
         for (File folder : exerciseDir.listFiles()){
             String[] pathChunks = folder.getPath().split("/");
-            String lastFolder = pathChunks[pathChunks.length-1];
-            System.out.println("\n\t> lastFolder: "+lastFolder);
-            if (lastFolder.equals("LowerBody")){
+            String folderName = pathChunks[pathChunks.length-1].trim();
+            System.out.println("\n\t> Folder: "+folderName);
+            if (folderName.equals("LowerBody")){
                 loadExercises(folder, 1);
             }
-            else if (lastFolder.equals("Core")){
+            else if (folderName.equals("Core")){
                 loadExercises(folder, 2);
             }
-            else if (lastFolder.equals("UpperBody")){
+            else if (folderName.equals("UpperBody")){
                 loadExercises(folder, 3);
             }
-            else if (lastFolder.equals("Back")){
+            else if (folderName.equals("Back")){
                 loadExercises(folder, 4);
+            }
+            else{
+                System.out.println("\n\t[!!!!] No match for folder: "+folderName);
             }
         }
     }
@@ -268,14 +272,13 @@ public class AllExercises extends AppCompatActivity {
                         // TODO Auto-generated method stub
                         System.out.println("[#] Long press: launching exercise template...");
                         Intent intent=new Intent(AllExercises.this, ExerciseTemplate.class);
-                        exercise[3] = "";
-                        intent.putExtra("ExerciseData", exercise);
+                        intent.putExtra("type", "exercises");
+                        intent.putExtra("Data", exercise);
                         startActivity(intent);
                         return true;
                     }
                 });
 
-                // System.out.print("[#] Adding exercise button:\n\t> Nombre: "+exercise[0]+"\n\t> Categoría: "+exercise[1]+"\n\t> Consejos: "+exercise[2]+"\n\t> Video: "+exercise[3]+"\n");
                 if(exercise[1] != null){
                     if (exercise[1].equals(getString(R.string.categoryBack))){
                         newButton.setText(exercise[0]);
@@ -316,7 +319,7 @@ public class AllExercises extends AppCompatActivity {
         if (item.getItemId() == R.id.newExercise){
             //add the function to perform here
             intent=new Intent(AllExercises.this, ExerciseTemplate.class);
-            intent.putExtra("new", "exercise");
+            intent.putExtra("type", "exercises");
             startActivity(intent);
             return true;
         }

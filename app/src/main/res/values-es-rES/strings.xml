@@ -1,0 +1,69 @@
+<resources>
+    <string name="app_name">GymCompanion 0.2.2</string>
+
+    <string name="add">Añadir</string>
+    <string name="save">Guardar</string>
+    <string name="load">Cargar</string>
+    <string name="next">Siguiente</string>
+    <string name="previous">Anterior</string>
+    <string name="delete">Borrar</string>
+    <string name="start">Empezar</string>
+    <string name="countdown">Cuentatrás</string>
+    <string name="cancel">Cancelar</string>
+
+    <!-- MainActivity -->
+    <string name="homeTitle">Tu Compañero de Gym</string>
+    <string name="goToWarmUp">Calentamiento</string>
+    <string name="goToExercises">Ejercicios</string>
+    <string name="goToSettings">Configurar</string>
+
+
+    <!-- ALlExercises -->
+    <string name="categoryBack">Espalda</string>
+    <string name="buttonStartCircuitTrainer">Circuito</string>
+    <string name="intervals">Intervalos</string>
+
+    <!-- AllWarmUps -->
+    <string name="categoryHeadNeck">Cabeza/Cuello</string>
+    <string name="categoryUpperBody">Parte Superior</string>
+    <string name="categoryCore">Tronco</string>
+    <string name="categoryLowerBody">Parte Inferior</string>
+
+    <!-- CountdownTimer -->
+
+    <!-- ExerciseTemplate -->
+    <string name="inputNameLabel">Nombre del Ejercicio</string>
+    <string name="inputNameHint">Nombre</string>
+    <string name="inputCategory">Categoría</string>
+    <string name="inputTipsLabel">3 consejos prácticos</string>
+    <string name="inputTipsHint_1">Consejo</string>
+    <string name="inputTipsHint_2">Consejo</string>
+    <string name="inputTipsHint_3">Consejo</string>
+    <string name="inputVideoLabel">Sube Video</string>
+    <string name="modifyExerciseButton">Modificar</string>
+    <string name="templateFilePickerTitle">Elige Video</string>
+    <string name="dataSaveFeedback">Datos guardados</string>
+    <string name="dataSaveProblem">Problema guardando datos</string>
+    <string name="confirmDeletion">Borrar este ejercicio?</string>
+
+    <!-- IntervalTrainer -->
+    <string name="recoveryDialogTitle">RECUPERADO!!!</string>
+    <string name="recoveryDialogText">Empieza AHORA!!</string>
+    <string name="exerciseDialogTitle">Bien Hecho</string>
+    <string name="exerciseDialogText">RECUPERATE !!!</string>
+
+    <!-- Settings -->
+    <string name="exerciseTimeLabel">Segundos de Ejercicio</string>
+    <string name="resetTimeLabel">Segundos de Reseteo</string>
+    <string name="importData">Importar Ejercicios</string>
+    <string name="exportData">Exportar Ejercicios</string>
+    <string name="importFilePickerTitle">Elige el archivo</string>
+    <string name="dataSavedDialogTitle">Datos guardados</string>
+    <string name="exportDialogTitle">Exportando</string>
+    <string name="exportDialogMessage">Guardado datos...</string>
+    <string name="importDialogTitle">Importando</string>
+    <string name="importDialogMessage">Cargando datos...</string>
+    <string name="exercises">Ejercicios</string>
+    <string name="recovery">Recuperación</string>
+
+</resources>

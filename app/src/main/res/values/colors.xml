@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="primaryLightColor">@android:color/holo_green_light</color>
+    <color name="primaryBackgroundColor">@android:color/holo_green_dark</color>
+    <color name="colorAccent">@android:color/holo_orange_light</color>
+
+    <color name="buttonBackgroundColor">@android:color/holo_orange_light</color>
+    <color name="selectedButtonColor">@android:color/holo_red_dark</color>
+    <color name="recoveryColor">@android:color/holo_blue_light</color>
+    <color name="exerciseColor">@android:color/holo_red_light</color>
+
+</resources>

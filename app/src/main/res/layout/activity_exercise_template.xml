@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ExerciseTemplate"
+    android:background="@color/primaryBackgroundColor"
+    >
+
+
+    <LinearLayout
+        android:id="@+id/inputFieldsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/buttonsLayout">
+
+        <TextView
+            android:id="@+id/inputNameLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/inputNameLabel"
+            android:textAlignment="center"
+            android:textSize="26sp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toTopOf="@+id/inputFieldsLayout"
+            app:layout_constraintBottom_toTopOf="@+id/inputNameText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+        <EditText
+            android:id="@+id/inputNameText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="20"
+            android:autofillHints="@string/inputNameHint"
+            android:inputType="textPersonName"
+            android:textAlignment="center"
+            android:background="@color/primaryLightColor"
+            app:layout_constraintTop_toBottomOf="@+id/inputNameLabel"
+            app:layout_constraintBottom_toTopOf="@+id/inputCategoryLabel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/inputCategoryLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/inputCategory"
+            android:textAlignment="center"
+            android:textSize="26sp"
+            app:layout_constraintTop_toBottomOf="@+id/inputNameText"
+            app:layout_constraintBottom_toTopOf="@+id/categorySpinner"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <Spinner
+            android:id="@+id/categorySpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/inputCategoryLabel"
+            app:layout_constraintBottom_toTopOf="@+id/inputTipsLabel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/inputTipsLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/inputTipsLabel"
+            android:textAlignment="center"
+            android:textSize="26sp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/categorySpinner"
+            app:layout_constraintBottom_toTopOf="@+id/inputTip_1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+
+        <EditText
+            android:id="@+id/inputTip_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:autofillHints="@string/inputTipsHint_1"
+            android:inputType="textPersonName"
+            android:textAlignment="center"
+            android:background="@color/primaryLightColor"
+            app:layout_constraintTop_toBottomOf="@+id/inputTipsLabel"
+            app:layout_constraintBottom_toTopOf="@+id/inputTip_2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <EditText
+            android:id="@+id/inputTip_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:autofillHints="@string/inputTipsHint_2"
+            android:inputType="textPersonName"
+            android:textAlignment="center"
+            android:background="@color/primaryLightColor"
+            app:layout_constraintTop_toBottomOf="@+id/inputTip_1"
+            app:layout_constraintBottom_toTopOf="@+id/inputTip_3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <EditText
+            android:id="@+id/inputTip_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:autofillHints="@string/inputTipsHint_3"
+            android:inputType="textPersonName"
+            android:textAlignment="center"
+            android:background="@color/primaryLightColor"
+            app:layout_constraintTop_toBottomOf="@+id/inputTip_2"
+            app:layout_constraintBottom_toTopOf="@+id/inputVideoButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <Button
+            android:id="@+id/inputVideoButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/inputVideoLabel"
+            android:textAlignment="center"
+            android:textSize="26sp"
+            android:background="?android:attr/selectableItemBackground"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/inputTip_3"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/buttonsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/feedback"
+        android:weightSum="3">
+
+
+        <Button
+            android:id="@+id/saveExerciseButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackground"
+            android:text="@string/save"
+            />
+
+        <Button
+            android:id="@+id/modifyExerciseButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/modifyExerciseButton"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackground"
+            android:layout_marginTop="8dp"
+            />
+
+        <Button
+            android:id="@+id/deleteExerciseButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/delete"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackground"
+            android:layout_marginTop="8dp"
+            />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/feedback"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@color/primaryLightColor"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="exercise_categories">
+        <item>Parte Inferior</item>
+        <item>Tronco</item>
+        <item>Parte Superior</item>
+        <item>Espalda</item>
+    </string-array>
+    <string-array name="warm_up_categories">
+        <item>Cabeza/Cuello</item>
+        <item>Parte Superior</item>
+        <item>Tronco</item>
+        <item>Parte Inferior</item>
+    </string-array>
+</resources>

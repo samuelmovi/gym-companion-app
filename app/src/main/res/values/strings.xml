@@ -1,0 +1,71 @@
+<resources>
+    <string name="app_name">GymCompanion 0.2.2</string>
+
+    <string name="add">Add</string>
+    <string name="save">Save</string>
+    <string name="load">Load</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="delete">Delete</string>
+    <string name="start">Start</string>
+    <string name="countdown">Countdown</string>
+    <string name="cancel">Cancel</string>
+
+
+    <!-- MainActivity -->
+    <string name="homeTitle">Your Gym Companion</string>
+    <string name="goToWarmUp">Warm-Up</string>
+    <string name="goToExercises">Exercises</string>
+    <string name="goToSettings">Settings</string>
+
+
+    <!-- ALlExercises -->
+    <string name="categoryBack">Back</string>
+    <string name="buttonStartCircuitTrainer">Circuit</string>
+    <string name="intervals">Intervals</string>
+
+    <!-- AllWarmUps -->
+    <string name="categoryHeadNeck">Head/Neck</string>
+    <string name="categoryUpperBody">Upper Body</string>
+    <string name="categoryCore">Core</string>
+    <string name="categoryLowerBody">Lower Body</string>
+
+    <!-- CountdownTimer -->
+
+    <!-- ExerciseTemplate -->
+    <string name="inputNameLabel">Exercise Name</string>
+    <string name="inputNameHint">Name</string>
+    <string name="inputCategory">Category</string>
+    <string name="inputTipsLabel">3 practical tips</string>
+    <string name="inputTipsHint_1">Tip</string>
+    <string name="inputTipsHint_2">Tip</string>
+    <string name="inputTipsHint_3">Tip</string>
+    <string name="inputVideoLabel">Load Video</string>
+    <string name="modifyExerciseButton">Modificar</string>
+    <string name="templateFilePickerTitle">Choose Video file</string>
+    <string name="dataSaveFeedback">Data saved</string>
+    <string name="dataSaveProblem">Problem saving data</string>
+    <string name="confirmDeletion">Delete this data?</string>
+
+
+    <!-- IntervalTrainer -->
+    <string name="recoveryDialogTitle">REFRESHED!!!</string>
+    <string name="recoveryDialogText">Start NOW!!</string>
+    <string name="exerciseDialogTitle">Well Done</string>
+    <string name="exerciseDialogText">RECOVER!!!</string>
+
+    <!-- Settings -->
+    <string name="exerciseTimeLabel">Seconds per exercise</string>
+    <string name="resetTimeLabel">Segundos per reset</string>
+    <string name="importData">Import Exercicies</string>
+    <string name="exportData">Export Exercicies</string>
+    <string name="importFilePickerTitle">Choose Zip file</string>
+    <string name="dataSavedDialogTitle">Data Saved</string>
+    <string name="exportDialogTitle">Exporting</string>
+    <string name="exportDialogMessage">Saving data</string>
+    <string name="importDialogTitle">Importing</string>
+    <string name="importDialogMessage">Loading new data</string>
+    <string name="exercises">Exercises</string>
+    <string name="recovery">Recovery</string>
+
+</resources>

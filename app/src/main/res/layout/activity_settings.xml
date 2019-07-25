@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Settings"
+    android:background="@color/primaryBackgroundColor"
+    >
+
+    <LinearLayout
+        android:id="@+id/timeSettings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        android:paddingBottom="20dp"
+        android:paddingTop="20dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/timeSettingsLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textSize="25sp"
+            android:textAppearance="@android:style/TextAppearance.Material.Medium"
+            android:text="@string/intervals"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/exerciseSeconds"/>
+
+        <LinearLayout
+            android:id="@+id/exerciseSeconds"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/timeSettingsLabel"
+            app:layout_constraintBottom_toTopOf="@+id/recoverySeconds"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/exerciseTimeLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="25sp"
+                android:textAppearance="@android:style/TextAppearance.Material.Medium"
+                android:text="@string/exercises"
+                android:paddingEnd="30dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <EditText
+                android:id="@+id/exerciseTimeInput"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:textSize="35sp"
+                android:inputType="number"
+                android:textAlignment="center"
+                android:background="@color/primaryLightColor"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/recoverySeconds"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp"
+            android:gravity="center_horizontal"
+            >
+
+            <TextView
+                android:id="@+id/recoveryTimeLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="25sp"
+                android:textAppearance="@android:style/TextAppearance.Material.Medium"
+                android:text="@string/recovery"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:paddingEnd="30dp"
+                android:gravity="start"/>
+
+            <EditText
+                android:id="@+id/recoveryTimeInput"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:textSize="35sp"
+                android:inputType="number"
+                android:textAlignment="center"
+                android:background="@color/primaryLightColor"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:gravity="end"
+                />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/saveSettingsData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/save"
+            android:textAlignment="center"
+            android:background="@color/primaryLightColor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/recoverySeconds"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </LinearLayout>
+
+
+
+
+
+        <Button
+            android:id="@+id/importDataButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/importData"
+            android:background="@color/primaryLightColor"
+            android:paddingLeft="20sp"
+            android:paddingRight="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/timeSettings"
+            app:layout_constraintBottom_toTopOf="@+id/exportDataButton"/>
+
+        <Button
+            android:id="@+id/exportDataButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/exportData"
+            android:background="@color/primaryLightColor"
+            android:paddingLeft="20sp"
+            android:paddingRight="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/importDataButton"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

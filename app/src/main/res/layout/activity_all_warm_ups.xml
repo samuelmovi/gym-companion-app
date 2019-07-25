@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primaryBackgroundColor"
+    tools:context=".AllWarmUps">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+        <ScrollView
+            android:id="@+id/mainScroll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:paddingTop="5dp"
+            android:paddingBottom="50dp"
+            >
+
+            <LinearLayout
+                android:id="@+id/verticalList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/categoryHeadNeck"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/primaryLightColor"
+                    android:text="@string/categoryHeadNeck"
+                    android:textAlignment="center"
+                    android:textSize="24sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/headNeckList" />
+
+                <LinearLayout
+                    android:id="@+id/headNeckList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintTop_toBottomOf="@+id/categoryHeadNeck"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:paddingBottom="10dp"
+                    >
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/categoryUpperBody"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/categoryUpperBody"
+                    android:textAlignment="center"
+                    android:textSize="24sp"
+                    app:layout_constraintTop_toBottomOf="@+id/headNeckList"
+                    app:layout_constraintBottom_toTopOf="@+id/upperBodyList"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:background="@color/primaryLightColor"/>
+
+                <LinearLayout
+                    android:id="@+id/upperBodyList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintTop_toBottomOf="@+id/categoryUpperBody"
+                    app:layout_constraintBottom_toTopOf="@+id/categoryCore"
+                    android:paddingBottom="10dp">
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/categoryCore"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/categoryCore"
+                    android:textAlignment="center"
+                    android:textSize="24sp"
+                    app:layout_constraintTop_toBottomOf="@+id/upperBodyList"
+                    app:layout_constraintBottom_toTopOf="@+id/coreList"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:background="@color/primaryLightColor"/>
+
+                <LinearLayout
+                    android:id="@+id/coreList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintTop_toBottomOf="@+id/categoryCore"
+                    app:layout_constraintBottom_toTopOf="@+id/categoryLowerBody"
+                    android:paddingBottom="10dp">
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/categoryLowerBody"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/categoryLowerBody"
+                    android:textAlignment="center"
+                    android:textSize="24sp"
+                    app:layout_constraintTop_toBottomOf="@+id/coreList"
+                    app:layout_constraintBottom_toTopOf="@+id/lowerBodyList"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:background="@color/primaryLightColor"/>
+
+                <LinearLayout
+                    android:id="@+id/lowerBodyList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintTop_toBottomOf="@+id/categoryLowerBody"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:paddingBottom="10dp">
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/all_warm_ups_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:paddingTop="20dp"
+        >
+
+        <Button
+            android:id="@+id/startWarmUp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/start"
+            android:background="?android:attr/selectableItemBackground"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

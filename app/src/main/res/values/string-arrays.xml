@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="exercise_categories">
+        <item>Lower Body</item>
+        <item>Core</item>
+        <item>Upper Body</item>
+        <item>Back</item>
+    </string-array>
+    <string-array name="warm_up_categories">
+        <item>Head/Neck</item>
+        <item>Upper Body</item>
+        <item>Core</item>
+        <item>Lower Body</item>
+    </string-array>
+</resources>
